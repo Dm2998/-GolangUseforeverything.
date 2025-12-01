@@ -4,7 +4,6 @@ package main
 import "fmt"
 
 const avogadro = 6.02214129e23
-
 const grams = 100.0
 
 type amu float64 
