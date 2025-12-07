@@ -14,12 +14,14 @@ DoSearch:
 		for k := 0; k < len(words[i]); k++ {
 			if words[i][k] == word {
 				fmt.Println("Found:", word)
-				break DoSearch
+				// break DoSearch
+				continue DoSearch
+				
 			}
 		}
 	}
 }
 
 func main() {
-	search("go")
+	search("bring")
 }
