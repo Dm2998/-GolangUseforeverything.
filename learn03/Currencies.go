@@ -39,4 +39,25 @@ var currencies = []Curr{
 var sortedCurrs []Curr
 
 
+func main() {
+	updateCurrencies(978, Curr{"EUR", "Euro", "Greece", 978})
+	printCurrencies()
+}
+
+func updateCurrencies(number int, newCurr Curr) {
+	for i, v := range currencies {
+		if number == v.Number {
+			currencies[i] = newCurr
+			fmt.Printf("%d: %v\n", v, newCurr)
+			break
+		}
+	}
+}
+
+
+func printCurrencies() {
+	for i := range currencies {
+		fmt.Printf("%d: %v\n", i, currencies[i])
+	}
+}
 
