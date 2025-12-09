@@ -53,7 +53,7 @@ func main() {
 	fmt.Println("-------------------")
 	fmt.Println("Sorted by Number:")
 	fmt.Println("-------------------")
-	sortByCurrency()
+	sortByNumber()
 	listCurrs()
 
 	fmt.Println("-------------------")
@@ -76,3 +76,26 @@ func listCurrs() {
 		}
 	}
 }
+
+
+func sortByNumber() {
+	N := len(currencies)
+	for i := 0; i < N -1; i++ {
+		currMin := i
+		for k := i +1; k < N; k++ {
+			if currencies[k].Number < currencies[currMin].Number {
+				currMin = k
+			}
+		}
+
+		if currMin != i {
+			temp := currencies[i]
+			currencies[i] = currencies[currMin]
+			currencies[currMin] = temp
+		}
+	}
+}
+
+
+
+
