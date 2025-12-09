@@ -97,5 +97,20 @@ func sortByNumber() {
 }
 
 
-
+func sortByCurrency() {
+	N := len(currencies)
+	for i := 0; i < N -1; i++ {
+		currMin := i 
+		for k := i +1; k < N; k++ {
+			if currencies[k].Currency < currencies[currMin].Currency {
+				currMin = k
+			}
+		}
+		if currMin != i {
+			temp := currencies[i]
+			currencies[i] = currencies[currMin]
+			currencies[currMin] = temp
+		}
+	}
+}
 
