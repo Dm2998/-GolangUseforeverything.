@@ -42,3 +42,13 @@ var currencies = []Curr{
 
 
 var sortedCurrs []Curr
+
+
+func main() {
+	fmt.Println("Currencies updated,")
+	fmt.Println("------------------")
+	listCurrs()
+
+
+	
+}
