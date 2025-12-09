@@ -50,5 +50,29 @@ func main() {
 	listCurrs()
 
 
-	
+	fmt.Println("-------------------")
+	fmt.Println("Sorted by Number:")
+	fmt.Println("-------------------")
+	sortByCurrency()
+	listCurrs()
+
+	fmt.Println("-------------------")
+	fmt.Println("Sorted By Name:")
+	fmt.Println("--------------------")
+	sortByCurrency()
+	listCurrs()
+
+
+
+
+}
+
+func listCurrs() {
+	i := 0
+	for i < len(currencies) {
+		for i < len(currencies) {
+			fmt.Println(currencies[i])
+			i++
+		}
+	}
 }
