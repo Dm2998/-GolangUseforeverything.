@@ -2,7 +2,10 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Curr struct {
 	Currency      string
@@ -58,6 +61,24 @@ func updateCurrencies(number int, newCurr Curr) {
 func printCurrencies() {
 	for i := range currencies {
 		fmt.Printf("%d: %v\n", i, currencies[i])
+	}
+}
+
+
+func find(filter string) {
+	for _, c := range currencies {
+		switch {
+			case strings.Contains(c.Currency, filter),
+				strings.Contains(c.Name, filter),
+				strings.Contains(c.Country, filter):
+				fmt.Println("Found:",c)
+		}
+	}
+}
+
+func doEmptyRange() {
+	for range currencies {
+		fmt.Println("This will not be printed")
 	}
 }
 
