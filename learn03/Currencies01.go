@@ -1,10 +1,17 @@
 
+package main
+
+import (
+	"fmt"
+)
 
 
-
-
-
-
+type Curr struct {
+	Currency    string
+	Name        string
+	Country     string
+	Number      int
+}
 
 
 
@@ -31,3 +38,7 @@ var currencies = []Curr{
 	Curr{"KFM", "Coromo Franc", "Comoros", 174},
 	Curr{"NZD", "New Zeland Dollar", "Tokelau", 554},
 }
+
+
+
+var sortedCurrs []Curr
