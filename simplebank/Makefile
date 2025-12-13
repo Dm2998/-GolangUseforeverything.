@@ -20,7 +20,10 @@ migratedown:
 sqlc:
 	sqlc generate
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc
+test:
+	go test -v -cover ./...
+
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc test
 
 
 # To run the Postgres troubleshooting port conflict with docker 
@@ -41,3 +44,8 @@ sqlc:
 # Stop-Service postgresql*
 
 #   end of the power shell commands # 
+
+
+# Uni Testing with database Postgres and Docker container.
+
+# go test -v 
